@@ -173,3 +173,9 @@ code, kbd, samp, pre, .font-mono {
   }
 }
 
+/* Ensure HTML hidden attribute is always strictly respected */
+[hidden] {
+  display: none !important;
+}
+
+

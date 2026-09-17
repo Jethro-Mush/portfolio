@@ -53,12 +53,19 @@ if config_env() == :prod do
       You can generate one by calling: mix phx.gen.secret
       """
 
-  host = System.get_env("PHX_HOST") || "example.com"
+  host = System.get_env("PHX_HOST") || "jethro-mushilingwa.onrender.com"
 
   config :portfolio, :dns_cluster_query, System.get_env("DNS_CLUSTER_QUERY")
 
   config :portfolio, PortfolioWeb.Endpoint,
     url: [host: host, port: 443, scheme: "https"],
+    check_origin: [
+      "//#{host}",
+      "//localhost",
+      "//127.0.0.1",
+      "//*.onrender.com",
+      "//jethro-mushilingwa.onrender.com"
+    ],
     http: [
       # Enable IPv6 and bind on all interfaces.
       # Set it to  {0, 0, 0, 0, 0, 0, 0, 1} for local network only access.
