@@ -1,0 +1,1099 @@
+<div class="min-h-screen bg-base-100 text-base-content antialiased selection:bg-primary/20 selection:text-primary">
+  <!-- Sticky Glassmorphic Navbar -->
+  <header class="sticky top-0 z-40 w-full border-b border-base-content/10 bg-base-100/80 backdrop-blur-md transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Monogram & Name -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="size-11 rounded-xl bg-gradient-to-tr from-primary to-accent p-0.5 shadow-md shadow-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 transition-all duration-300">
+          <div class="w-full h-full bg-base-100 rounded-[10px] flex items-center justify-center">
+            <span class="font-mono font-bold text-lg text-transparent bg-clip-text bg-gradient-to-tr from-primary to-accent">
+              &lt;RM&gt;
+            </span>
+          </div>
+        </div>
+        <div>
+          <div class="font-bold text-base tracking-tight leading-none group-hover:text-primary transition-colors">
+            Rimwell J. Mushilingwa
+          </div>
+          <div class="text-xs text-base-content/60 font-mono mt-1">
+            Software Developer · Elixir & Enterprise
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2 text-sm font-medium text-base-content/80">
+        <a href="#about" class="px-3 py-1.5 rounded-lg hover:text-primary hover:bg-base-200 transition-colors">About</a>
+        <a href="#projects" class="px-3 py-1.5 rounded-lg hover:text-primary hover:bg-base-200 transition-colors">Systems & Impact</a>
+        <a href="#skills" class="px-3 py-1.5 rounded-lg hover:text-primary hover:bg-base-200 transition-colors">Skills</a>
+        <a href="#experience" class="px-3 py-1.5 rounded-lg hover:text-primary hover:bg-base-200 transition-colors">Experience</a>
+        <a href="#education" class="px-3 py-1.5 rounded-lg hover:text-primary hover:bg-base-200 transition-colors">Education</a>
+        <a href="#contact" class="px-3 py-1.5 rounded-lg hover:text-primary hover:bg-base-200 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Actions: Theme Toggle, Print CV, Contact CTA -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <Layouts.theme_toggle />
+
+        <button
+          onclick="window.print()"
+          class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg border border-base-content/20 hover:border-primary/50 hover:bg-base-200 transition-all cursor-pointer"
+          title="Print or Save CV as PDF"
+        >
+          <.icon name="hero-printer" class="size-4 text-primary" />
+          <span>Print CV</span>
+        </button>
+
+        <a
+          href="#contact"
+          class="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold text-primary-content bg-primary rounded-xl shadow-md shadow-primary/25 hover:brightness-110 active:scale-95 transition-all"
+        >
+          <span>Let's Talk</span>
+          <.icon name="hero-arrow-up-right" class="size-4" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative overflow-hidden pt-12 pb-20 sm:pt-20 sm:pb-28 border-b border-base-content/5">
+    <!-- Ambient glowing backgrounds -->
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-primary/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute top-1/2 -right-32 w-96 h-96 bg-accent/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <!-- Availability Badge -->
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-semibold tracking-wide">
+            <span class="relative flex size-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full size-2 bg-emerald-500"></span>
+            </span>
+            <span>Available for Senior &amp; Enterprise Software Roles</span>
+          </div>
+
+          <!-- Headline -->
+          <div class="space-y-2">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-base-content leading-tight">
+              Engineering Resilient
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent">
+                FinTech &amp; Enterprise
+              </span>
+              Systems.
+            </h1>
+            <p class="text-xl sm:text-2xl font-semibold text-base-content/80">
+              Rimwell Jethro Mushilingwa
+            </p>
+          </div>
+
+          <!-- Location & Summary -->
+          <div class="flex flex-wrap items-center gap-y-2 gap-x-4 text-xs sm:text-sm text-base-content/70 font-mono">
+            <span class="flex items-center gap-1.5">
+              <.icon name="hero-map-pin" class="size-4 text-primary" />
+              Lusaka, Zambia (GMT+2)
+            </span>
+            <span class="text-base-content/30">&bull;</span>
+            <span class="flex items-center gap-1.5">
+              <.icon name="hero-briefcase" class="size-4 text-secondary" />
+              5+ Years Enterprise Experience
+            </span>
+            <span class="text-base-content/30">&bull;</span>
+            <span class="flex items-center gap-1.5">
+              <.icon name="hero-bolt" class="size-4 text-amber-500" />
+              Elixir &middot; Phoenix &middot; Full-Stack
+            </span>
+          </div>
+
+          <p class="text-base sm:text-lg text-base-content/75 leading-relaxed max-w-2xl">
+            Software Developer with over 5 years of proven experience architecting, building, and deploying mission-critical systems for commercial banks, national payment gateways, microfinance institutions, and rail transport. Passionate about concurrent programming in Elixir, clean system design, and high-performance financial workflows.
+          </p>
+
+          <!-- CTAs & Social Links -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a
+              href="#projects"
+              class="px-6 py-3.5 rounded-xl font-semibold text-sm bg-primary text-primary-content shadow-lg shadow-primary/25 hover:brightness-110 active:scale-95 transition-all flex items-center gap-2"
+            >
+              <.icon name="hero-squares-2x2" class="size-4" />
+              <span>Explore Enterprise Systems</span>
+            </a>
+
+            <a
+              href="#contact"
+              class="px-6 py-3.5 rounded-xl font-semibold text-sm border border-base-content/20 hover:border-primary hover:bg-base-200 active:scale-95 transition-all flex items-center gap-2"
+            >
+              <.icon name="hero-envelope" class="size-4 text-primary" />
+              <span>Contact Directly</span>
+            </a>
+
+            <!-- GitHub & LinkedIn quick pills -->
+            <div class="flex items-center gap-2 ml-auto sm:ml-0">
+              <a
+                href="https://github.com/Jethro-Mush"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="size-11 rounded-xl border border-base-content/15 flex items-center justify-center hover:border-primary hover:text-primary hover:bg-base-200 transition-all"
+                title="GitHub Profile"
+              >
+                <svg class="size-5 fill-current" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/jethro-mushilingwa-b0863023b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="size-11 rounded-xl border border-base-content/15 flex items-center justify-center hover:border-primary hover:text-primary hover:bg-base-200 transition-all"
+                title="LinkedIn Profile"
+              >
+                <svg class="size-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero: Interactive Live Elixir Terminal Card -->
+        <div class="lg:col-span-5">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+
+            <div class="relative rounded-2xl bg-base-200/90 border border-base-content/10 shadow-2xl overflow-hidden backdrop-blur-xl">
+              <!-- Window top bar -->
+              <div class="flex items-center justify-between px-4 py-3 bg-base-300/80 border-b border-base-content/10">
+                <div class="flex items-center gap-2">
+                  <div class="size-3 rounded-full bg-rose-500/80"></div>
+                  <div class="size-3 rounded-full bg-amber-500/80"></div>
+                  <div class="size-3 rounded-full bg-emerald-500/80"></div>
+                </div>
+                <div class="text-xs font-mono text-base-content/60 flex items-center gap-1.5">
+                  <.icon name="hero-command-line" class="size-3.5 text-primary" />
+                  <span>rimwell_portfolio.ex</span>
+                </div>
+                <div class="size-3"></div>
+              </div>
+
+              <!-- Code Content -->
+              <div class="p-5 font-mono text-xs sm:text-[13px] leading-relaxed overflow-x-auto space-y-1 text-base-content/90">
+                <p><span class="text-purple-400">defmodule</span> <span class="text-amber-300 font-bold">Rimwell.Engineer</span> <span class="text-purple-400">do</span></p>
+                <p class="pl-4 text-base-content/50"># Enterprise Full-Stack &amp; Systems Architect</p>
+                <p class="pl-4"><span class="text-cyan-400">@years_experience</span> <span class="text-emerald-400">5+</span></p>
+                <p class="pl-4"><span class="text-cyan-400">@location</span> <span class="text-emerald-300">&quot;Lusaka, Zambia&quot;</span></p>
+                <p class="pl-4"><span class="text-cyan-400">@current_role</span> <span class="text-emerald-300">&quot;Full Stack Developer @ DSSL&quot;</span></p>
+                <p class="pl-4 pt-1"><span class="text-purple-400">@core_stack</span> [</p>
+                <p class="pl-8 text-amber-200">:elixir, :phoenix_live_view, :flutter,</p>
+                <p class="pl-8 text-amber-200">:postgresql, :ms_sql, :docker</p>
+                <p class="pl-4">]</p>
+                <p class="pl-4 pt-1"><span class="text-purple-400">@proven_impact</span> &#37;&#123;</p>
+                <p class="pl-8"><span class="text-sky-300">stanbic_bank&#58;</span> <span class="text-emerald-300">&quot;+85% efficiency boost&quot;</span>,</p>
+                <p class="pl-8"><span class="text-sky-300">fnb_banklink&#58;</span> <span class="text-emerald-300">&quot;+30% digital tx volume&quot;</span>,</p>
+                <p class="pl-8"><span class="text-sky-300">payment_gateway&#58;</span> <span class="text-emerald-300">&quot;high-concurrency routing&quot;</span>,</p>
+                <p class="pl-8"><span class="text-sky-300">national_railways&#58;</span> <span class="text-emerald-300">&quot;fleet telematics &amp; maintenance&quot;</span></p>
+                <p class="pl-4">&#125;</p>
+                <p class="pt-1"><span class="text-purple-400">end</span></p>
+              </div>
+
+              <!-- Terminal Footer / Live Status -->
+              <div class="px-5 py-3 bg-base-300/50 border-t border-base-content/10 flex items-center justify-between text-xs font-mono text-base-content/70">
+                <div class="flex items-center gap-2">
+                  <span class="size-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span>OTP 27 · Elixir 1.20 · BEAM</span>
+                </div>
+                <span class="text-primary font-semibold">100% Reliable</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Metrics Stat Ribbon -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div class="p-5 rounded-2xl bg-base-200/50 border border-base-content/10 backdrop-blur-sm hover:border-primary/40 transition-all">
+          <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+            5+
+          </div>
+          <div class="text-sm font-semibold text-base-content mt-1">Years Production Code</div>
+          <div class="text-xs text-base-content/60 mt-0.5">Enterprise engineering since 2020</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-base-200/50 border border-base-content/10 backdrop-blur-sm hover:border-primary/40 transition-all">
+          <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+            85%
+          </div>
+          <div class="text-sm font-semibold text-base-content mt-1">Efficiency Increase</div>
+          <div class="text-xs text-base-content/60 mt-0.5">Stanbic Bank regulatory engine</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-base-200/50 border border-base-content/10 backdrop-blur-sm hover:border-primary/40 transition-all">
+          <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+            +30%
+          </div>
+          <div class="text-sm font-semibold text-base-content mt-1">Transaction Volume</div>
+          <div class="text-xs text-base-content/60 mt-0.5">FNB corporate Banklink portal</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-base-200/50 border border-base-content/10 backdrop-blur-sm hover:border-primary/40 transition-all">
+          <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+            7+
+          </div>
+          <div class="text-sm font-semibold text-base-content mt-1">Tier-1 Deployments</div>
+          <div class="text-xs text-base-content/60 mt-0.5">Banks, GovTech &amp; Logistics</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Value Proposition Section -->
+  <section id="about" class="py-20 border-b border-base-content/5 bg-base-200/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Personal Highlights -->
+        <div class="lg:col-span-5 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-primary/10 text-primary text-xs font-mono font-semibold">
+            <.icon name="hero-user" class="size-4" />
+            <span>EXECUTIVE PROFILE</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-base-content">
+            Problem Solver, Systems Architect, &amp; Team Collaborator.
+          </h2>
+          <p class="text-base text-base-content/75 leading-relaxed">
+            I specialize in translating critical enterprise challenges into clean, fault-tolerant software. Over the past 6+ years at Probase Limited and now at DSSL, I have designed systems that handle financial data, process real-time payments, and automate compliance audits for tier-1 institutions.
+          </p>
+
+          <!-- Core attributes list -->
+          <div class="space-y-3 pt-2">
+            <div class="flex items-start gap-3">
+              <div class="p-1 rounded-lg bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 mt-0.5">
+                <.icon name="hero-check" class="size-4" />
+              </div>
+              <div>
+                <span class="font-semibold text-sm">High Concurrency &amp; Fault Tolerance:</span>
+                <span class="text-sm text-base-content/70"> Skilled with Elixir/Phoenix on the BEAM for concurrent, crash-resilient architectures.</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="p-1 rounded-lg bg-primary/15 text-primary mt-0.5">
+                <.icon name="hero-check" class="size-4" />
+              </div>
+              <div>
+                <span class="font-semibold text-sm">FinTech &amp; Banking Expertise:</span>
+                <span class="text-sm text-base-content/70"> Proven delivery for Stanbic Bank, FNB, Atlas Mara, and payment gateways.</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="p-1 rounded-lg bg-secondary/15 text-secondary mt-0.5">
+                <.icon name="hero-check" class="size-4" />
+              </div>
+              <div>
+                <span class="font-semibold text-sm">Full-Stack &amp; Mobile Versatility:</span>
+                <span class="text-sm text-base-content/70"> From relational database optimization to Flutter mobile apps and responsive web interfaces.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Summary Cards -->
+        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4 sm:gap-6">
+          <div class="p-6 rounded-2xl bg-base-100 border border-base-content/10 shadow-sm space-y-3 hover:border-primary/40 transition-all">
+            <div class="size-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+              <.icon name="hero-building-office-2" class="size-6" />
+            </div>
+            <h3 class="font-bold text-lg text-base-content">Enterprise Pedigree</h3>
+            <p class="text-sm text-base-content/70 leading-relaxed">
+              Extensive hands-on leadership building platforms for Zambia's top banking corporations and statutory regulatory bodies.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-base-100 border border-base-content/10 shadow-sm space-y-3 hover:border-primary/40 transition-all">
+            <div class="size-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
+              <.icon name="hero-cpu-chip" class="size-6" />
+            </div>
+            <h3 class="font-bold text-lg text-base-content">Clean Code &amp; Testing</h3>
+            <p class="text-sm text-base-content/70 leading-relaxed">
+              Disciplined approaches to code review, automated testing, technical documentation, and containerized CI/CD deployments.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-base-100 border border-base-content/10 shadow-sm space-y-3 hover:border-primary/40 transition-all">
+            <div class="size-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center">
+              <.icon name="hero-users" class="size-6" />
+            </div>
+            <h3 class="font-bold text-lg text-base-content">Technical Leadership</h3>
+            <p class="text-sm text-base-content/70 leading-relaxed">
+              Led development teams through complex requirement analyses, stakeholder alignment, and on-schedule deliveries.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-base-100 border border-base-content/10 shadow-sm space-y-3 hover:border-primary/40 transition-all">
+            <div class="size-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+              <.icon name="hero-academic-cap" class="size-6" />
+            </div>
+            <h3 class="font-bold text-lg text-base-content">Continuous Evolution</h3>
+            <p class="text-sm text-base-content/70 leading-relaxed">
+              BSc in Computer Science (ZCAS), ALX Software Engineering Certification, and teacher background in Math &amp; Computing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enterprise Systems & Projects Showcase -->
+  <section id="projects" class="py-20 border-b border-base-content/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div class="space-y-3 max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-primary/10 text-primary text-xs font-mono font-semibold">
+            <.icon name="hero-rocket-launch" class="size-4" />
+            <span>ENTERPRISE CASE STUDIES &amp; SYSTEMS</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-base-content">
+            Mission-Critical Software Built &amp; Deployed.
+          </h2>
+          <p class="text-base text-base-content/70">
+            Click any system below to inspect architectural decisions, technical challenges, and business impact.
+          </p>
+        </div>
+
+        <!-- Filter Buttons (LiveView Reactive) -->
+        <div class="flex flex-wrap gap-2 p-1.5 bg-base-200 rounded-2xl border border-base-content/10 self-start">
+          <button
+            phx-click="filter_projects"
+            phx-value-category="all"
+            class={"px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all cursor-pointer " <>
+              if @active_filter == "all", do: "bg-primary text-primary-content shadow-sm", else: "text-base-content/70 hover:text-base-content hover:bg-base-300"}
+          >
+            All Systems (8)
+          </button>
+
+          <button
+            phx-click="filter_projects"
+            phx-value-category="fintech"
+            class={"px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all cursor-pointer " <>
+              if @active_filter == "fintech", do: "bg-primary text-primary-content shadow-sm", else: "text-base-content/70 hover:text-base-content hover:bg-base-300"}
+          >
+            FinTech &amp; Banking (5)
+          </button>
+
+          <button
+            phx-click="filter_projects"
+            phx-value-category="enterprise"
+            class={"px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all cursor-pointer " <>
+              if @active_filter == "enterprise", do: "bg-primary text-primary-content shadow-sm", else: "text-base-content/70 hover:text-base-content hover:bg-base-300"}
+          >
+            GovTech &amp; Logistics (2)
+          </button>
+
+          <button
+            phx-click="filter_projects"
+            phx-value-category="mobile"
+            class={"px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all cursor-pointer " <>
+              if @active_filter == "mobile", do: "bg-primary text-primary-content shadow-sm", else: "text-base-content/70 hover:text-base-content hover:bg-base-300"}
+          >
+            Mobile &amp; Ticketing (1)
+          </button>
+        </div>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <%= for project <- @filtered_projects do %>
+          <div class="group relative rounded-2xl bg-base-200/50 border border-base-content/10 hover:border-primary/50 hover:bg-base-200 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1">
+            <!-- Card Header -->
+            <div class="p-6 space-y-4">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+                  {project.badge}
+                </span>
+                <span class="text-xs font-mono font-medium text-base-content/50">
+                  {project.client}
+                </span>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-xl text-base-content group-hover:text-primary transition-colors leading-snug">
+                  {project.title}
+                </h3>
+                <p class="text-xs font-medium text-secondary mt-1">
+                  {project.headline}
+                </p>
+              </div>
+
+              <p class="text-sm text-base-content/70 line-clamp-3 leading-relaxed">
+                {project.summary}
+              </p>
+
+              <!-- Metrics Pills -->
+              <div class="grid grid-cols-3 gap-2 pt-2">
+                <%= for metric <- project.metrics do %>
+                  <div class="p-2 rounded-xl bg-base-100/70 border border-base-content/5 text-center">
+                    <div class="text-xs sm:text-sm font-bold text-primary truncate">{metric.value}</div>
+                    <div class="text-[10px] text-base-content/60 truncate uppercase tracking-wider mt-0.5">{metric.label}</div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+
+            <!-- Card Footer -->
+            <div class="p-6 pt-0 space-y-4">
+              <!-- Tech stack tags -->
+              <div class="flex flex-wrap gap-1.5">
+                <%= for tag <- project.tech_stack do %>
+                  <span class="px-2.5 py-0.5 rounded-md text-[11px] font-mono bg-base-300 text-base-content/80">
+                    {tag}
+                  </span>
+                <% end %>
+              </div>
+
+              <!-- Open Architecture Details Modal Button -->
+              <button
+                phx-click="open_project"
+                phx-value-id={project.id}
+                class="w-full py-2.5 px-4 rounded-xl text-xs font-semibold border border-base-content/15 group-hover:border-primary group-hover:bg-primary group-hover:text-primary-content transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <span>View System Architecture</span>
+                <.icon name="hero-arrow-right" class="size-3.5" />
+              </button>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Skills Matrix -->
+  <section id="skills" class="py-20 border-b border-base-content/5 bg-base-200/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-primary/10 text-primary text-xs font-mono font-semibold">
+          <.icon name="hero-code-bracket-square" class="size-4" />
+          <span>TECHNICAL CAPABILITIES</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-base-content">
+          Comprehensive Engineering Matrix.
+        </h2>
+        <p class="text-base text-base-content/70">
+          A battle-tested technology stack refined over 5+ years of delivering high-concurrency systems, mobile apps, and relational databases.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <%= for group <- @skills do %>
+          <div class="p-6 rounded-2xl bg-base-100 border border-base-content/10 shadow-sm hover:border-primary/40 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <div class="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                  <.icon name={group.icon} class="size-5" />
+                </div>
+                <h3 class="font-bold text-base text-base-content">{group.category}</h3>
+              </div>
+
+              <!-- Skills items list -->
+              <div class="space-y-3 pt-2">
+                <%= for item <- group.items do %>
+                  <div class={"p-3 rounded-xl border transition-all " <>
+                    if item.highlight, do: "bg-primary/5 border-primary/20", else: "bg-base-200/50 border-base-content/5"}>
+                    <div class="flex items-center justify-between">
+                      <span class={"font-semibold text-sm " <> if item.highlight, do: "text-primary", else: "text-base-content"}>
+                        {item.name}
+                      </span>
+                      <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-base-300 text-base-content/70">
+                        {item.level}
+                      </span>
+                    </div>
+                    <div class="text-xs text-base-content/60 mt-1 font-mono">
+                      {item.exp}
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience & Career Progression Timeline -->
+  <section id="experience" class="py-20 border-b border-base-content/5">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-primary/10 text-primary text-xs font-mono font-semibold">
+          <.icon name="hero-clock" class="size-4" />
+          <span>CAREER PROGRESSION</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-base-content">
+          Professional Journey.
+        </h2>
+        <p class="text-base text-base-content/70">
+          Chronological record of roles, major achievements, and enterprise value created.
+        </p>
+      </div>
+
+      <!-- Timeline Component -->
+      <div class="relative border-l-2 border-primary/30 ml-4 sm:ml-8 space-y-12 pl-6 sm:pl-10">
+        <%= for exp <- @experience do %>
+          <div class="relative group">
+            <!-- Timeline Node Indicator -->
+            <div class={"absolute -left-[31px] sm:-left-[47px] top-1.5 size-5 sm:size-6 rounded-full border-4 border-base-100 flex items-center justify-center transition-all " <>
+              if exp.current, do: "bg-emerald-500 ring-4 ring-emerald-500/20", else: "bg-primary group-hover:scale-110"}>
+            </div>
+
+            <div class="p-6 sm:p-8 rounded-2xl bg-base-200/50 border border-base-content/10 shadow-sm space-y-4 hover:border-primary/40 hover:bg-base-200 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-bold text-base-content">
+                    {exp.role}
+                  </h3>
+                  <div class="text-sm font-semibold text-primary mt-0.5">
+                    {exp.company} <span class="text-base-content/40 font-normal">· {exp.location}</span>
+                  </div>
+                </div>
+
+                <div class="inline-flex items-center gap-2 self-start sm:self-auto px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold bg-base-300 text-base-content/80">
+                  <%= if exp.current do %>
+                    <span class="size-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <% end %>
+                  <span>{exp.period}</span>
+                </div>
+              </div>
+
+              <p class="text-sm sm:text-base text-base-content/80 leading-relaxed">
+                {exp.summary}
+              </p>
+
+              <!-- Key Achievements List -->
+              <div class="space-y-2 pt-2">
+                <div class="text-xs font-mono uppercase tracking-wider text-base-content/50 font-bold">
+                  Key Achievements &amp; Responsibilities:
+                </div>
+                <ul class="space-y-2">
+                  <%= for ach <- exp.achievements do %>
+                    <li class="flex items-start gap-2.5 text-xs sm:text-sm text-base-content/75 leading-relaxed">
+                      <.icon name="hero-chevron-right" class="size-4 text-primary shrink-0 mt-0.5" />
+                      <span>{ach}</span>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <%= for tag <- exp.tags do %>
+                  <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-base-300/80 text-base-content/70">
+                    {tag}
+                  </span>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Credentials Section -->
+  <section id="education" class="py-20 border-b border-base-content/5 bg-base-200/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-primary/10 text-primary text-xs font-mono font-semibold">
+          <.icon name="hero-academic-cap" class="size-4" />
+          <span>ACADEMIC FOUNDATION</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-base-content">
+          Education &amp; Qualifications.
+        </h2>
+        <p class="text-base text-base-content/70">
+          Rigorous computer science, software engineering, and mathematical training.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <%= for edu <- @education do %>
+          <div class="p-6 rounded-2xl bg-base-100 border border-base-content/10 shadow-sm flex flex-col justify-between hover:border-primary/40 hover:-translate-y-1 transition-all">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-primary px-2.5 py-1 rounded bg-primary/10">
+                  {edu.year}
+                </span>
+                <span class="text-[11px] font-mono text-base-content/50">
+                  {edu.badge}
+                </span>
+              </div>
+
+              <h3 class="font-bold text-base text-base-content leading-snug">
+                {edu.degree}
+              </h3>
+
+              <div class="text-xs font-semibold text-secondary">
+                {edu.institution}
+              </div>
+
+              <p class="text-xs text-base-content/70 leading-relaxed">
+                {edu.description}
+              </p>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-base-content/5 text-[11px] font-mono text-base-content/50 flex items-center gap-1">
+              <.icon name="hero-map-pin" class="size-3 text-primary" />
+              <span>{edu.location}</span>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Referees & Professional Endorsements (Interactive Toggle) -->
+  <section id="references" class="py-20 border-b border-base-content/5">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
+        <div class="space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-primary/10 text-primary text-xs font-mono font-semibold">
+            <.icon name="hero-check-badge" class="size-4" />
+            <span>VERIFIED REFERENCES</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-base-content">
+            Professional Referees.
+          </h2>
+          <p class="text-base text-base-content/70">
+            Supervisors and academic leads who can speak to my technical competency, delivery, and integrity.
+          </p>
+        </div>
+
+        <button
+          phx-click="toggle_referees"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs border border-primary/40 text-primary hover:bg-primary hover:text-primary-content transition-all self-start cursor-pointer"
+        >
+          <.icon name={if @show_referees, do: "hero-eye-slash", else: "hero-eye"} class="size-4" />
+          <span>{if @show_referees, do: "Hide Referees", else: "Show Contact Details"}</span>
+        </button>
+      </div>
+
+      <%= if @show_referees do %>
+        <div class="grid md:grid-cols-3 gap-6 transition-all duration-300">
+          <%= for ref <- @referees do %>
+            <div class="p-6 rounded-2xl bg-base-200/50 border border-base-content/10 shadow-sm space-y-4 hover:border-primary/40 transition-all">
+              <div class="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">
+                <.icon name="hero-user-circle" class="size-6" />
+              </div>
+
+              <div>
+                <h3 class="font-bold text-base text-base-content">{ref.name}</h3>
+                <div class="text-xs font-semibold text-primary">{ref.role}</div>
+                <div class="text-xs text-base-content/60 mt-0.5">{ref.organization}</div>
+              </div>
+
+              <div class="p-3 rounded-xl bg-base-100 border border-base-content/5 space-y-2 text-xs font-mono">
+                <div class="text-base-content/50 text-[10px] uppercase font-bold tracking-wider">
+                  {ref.relationship}
+                </div>
+
+                <div class="flex items-center gap-2 text-base-content/80">
+                  <.icon name="hero-phone" class="size-3.5 text-primary" />
+                  <a href={"tel:" <> ref.phone} class="hover:underline">{ref.phone}</a>
+                </div>
+
+                <%= if Map.get(ref, :email) do %>
+                  <div class="flex items-center gap-2 text-base-content/80">
+                    <.icon name="hero-envelope" class="size-3.5 text-primary" />
+                    <a href={"mailto:" <> ref.email} class="hover:underline truncate">{ref.email}</a>
+                  </div>
+                <% end %>
+
+                <%= if Map.get(ref, :linkedin) do %>
+                  <div class="flex items-center gap-2 text-base-content/80">
+                    <.icon name="hero-link" class="size-3.5 text-primary" />
+                    <a href={ref.linkedin} target="_blank" rel="noopener noreferrer" class="hover:underline text-primary">LinkedIn Profile</a>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="p-8 rounded-2xl bg-base-200/30 border border-dashed border-base-content/15 text-center space-y-3">
+          <.icon name="hero-lock-closed" class="size-8 text-primary/60 mx-auto" />
+          <h3 class="font-bold text-base text-base-content">Referee Contact Information Available</h3>
+          <p class="text-xs text-base-content/60 max-w-md mx-auto">
+            Click the "Show Contact Details" button above to view supervisor references and academic leadership contacts.
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+  <!-- Hobbies & Beyond Code -->
+  <section class="py-20 border-b border-base-content/5 bg-base-200/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-primary/10 text-primary text-xs font-mono font-semibold">
+          <.icon name="hero-heart" class="size-4" />
+          <span>BEYOND THE CODE</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-base-content">
+          Interests &amp; Balance.
+        </h2>
+        <p class="text-base text-base-content/70">
+          Cultivating creativity, strategic thinking, and continuous curiosity outside the IDE.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <%= for hob <- @hobbies do %>
+          <div class="p-5 rounded-2xl bg-base-100 border border-base-content/10 shadow-sm text-center space-y-2 hover:border-primary/40 hover:-translate-y-1 transition-all">
+            <div class="size-11 mx-auto rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+              <.icon name={hob.icon} class="size-5" />
+            </div>
+            <div class="font-bold text-xs sm:text-sm text-base-content leading-tight">{hob.name}</div>
+            <div class="text-[11px] text-base-content/60 leading-tight">{hob.desc}</div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Contact & Connect Section -->
+  <section id="contact" class="py-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-start">
+        <!-- Contact Information & Quick Action Cards -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="space-y-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-primary/10 text-primary text-xs font-mono font-semibold">
+              <.icon name="hero-envelope-open" class="size-4" />
+              <span>GET IN TOUCH</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-base-content">
+              Let's Build Something Exceptional Together.
+            </h2>
+            <p class="text-base text-base-content/70 leading-relaxed">
+              Whether you are looking for a senior full-stack engineer for a mission-critical platform, need fintech/banking expertise, or want to consult on system architecture, my inbox and phone are open.
+            </p>
+          </div>
+
+          <!-- Direct Contact Cards -->
+          <div class="space-y-3 pt-2">
+            <!-- Email -->
+            <div class="p-4 rounded-2xl bg-base-200/50 border border-base-content/10 flex items-center justify-between gap-3 hover:border-primary/40 transition-all">
+              <div class="flex items-center gap-3">
+                <div class="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                  <.icon name="hero-envelope" class="size-5" />
+                </div>
+                <div>
+                  <div class="text-[11px] font-mono text-base-content/50 uppercase">Email Address</div>
+                  <a href="mailto:Mushilingwaj@Gmail.Com" class="font-semibold text-sm hover:text-primary transition-colors">
+                    Mushilingwaj@Gmail.Com
+                  </a>
+                </div>
+              </div>
+              <button
+                phx-click="copy_text"
+                phx-value-field="email"
+                phx-value-value="Mushilingwaj@Gmail.Com"
+                class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border border-base-content/15 hover:border-primary hover:text-primary transition-all cursor-pointer"
+              >
+                <%= if @copied_field == "email", do: "Copied!", else: "Copy" %>
+              </button>
+            </div>
+
+            <!-- Phone / WhatsApp -->
+            <div class="p-4 rounded-2xl bg-base-200/50 border border-base-content/10 flex items-center justify-between gap-3 hover:border-primary/40 transition-all">
+              <div class="flex items-center gap-3">
+                <div class="size-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
+                  <.icon name="hero-phone" class="size-5" />
+                </div>
+                <div>
+                  <div class="text-[11px] font-mono text-base-content/50 uppercase">Direct Mobile &amp; WhatsApp</div>
+                  <a href="tel:+260978435737" class="font-semibold text-sm hover:text-secondary transition-colors">
+                    +260 978 435 737
+                  </a>
+                </div>
+              </div>
+              <button
+                phx-click="copy_text"
+                phx-value-field="phone"
+                phx-value-value="+260978435737"
+                class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border border-base-content/15 hover:border-primary hover:text-primary transition-all cursor-pointer"
+              >
+                <%= if @copied_field == "phone", do: "Copied!", else: "Copy" %>
+              </button>
+            </div>
+
+            <!-- Location -->
+            <div class="p-4 rounded-2xl bg-base-200/50 border border-base-content/10 flex items-center gap-3">
+              <div class="size-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+                <.icon name="hero-map-pin" class="size-5" />
+              </div>
+              <div>
+                <div class="text-[11px] font-mono text-base-content/50 uppercase">Location</div>
+                <div class="font-semibold text-sm text-base-content">
+                  Barlastone Park, Lusaka, Zambia
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Profiles Links -->
+          <div class="pt-2 flex flex-wrap items-center gap-3">
+            <a
+              href="https://github.com/Jethro-Mush"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-base-content/15 text-xs font-semibold hover:border-primary hover:text-primary hover:bg-base-200 transition-all"
+            >
+              <svg class="size-4 fill-current" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>github.com/Jethro-Mush</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/jethro-mushilingwa-b0863023b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-base-content/15 text-xs font-semibold hover:border-primary hover:text-primary hover:bg-base-200 transition-all"
+            >
+              <svg class="size-4 fill-current" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Reactive LiveView Contact Form -->
+        <div class="lg:col-span-7">
+          <div class="p-8 sm:p-10 rounded-3xl bg-base-200/60 border border-base-content/10 shadow-xl backdrop-blur-xl">
+            <%= if @message_sent do %>
+              <div class="text-center py-12 space-y-4">
+                <div class="size-16 rounded-2xl bg-emerald-500/15 text-emerald-500 flex items-center justify-center mx-auto">
+                  <.icon name="hero-check-circle" class="size-10" />
+                </div>
+                <h3 class="text-2xl font-bold text-base-content">Message Sent Successfully!</h3>
+                <p class="text-sm text-base-content/70 max-w-md mx-auto leading-relaxed">
+                  Thank you for reaching out. Rimwell will review your inquiry and get back to you promptly.
+                </p>
+                <button
+                  phx-click="reset_contact"
+                  class="mt-4 px-6 py-2.5 rounded-xl text-xs font-semibold bg-primary text-primary-content hover:brightness-110 transition-all cursor-pointer"
+                >
+                  Send Another Message
+                </button>
+              </div>
+            <% else %>
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-bold text-base-content">Send a Direct Message</h3>
+                  <p class="text-xs text-base-content/60 mt-1">Real-time reactive submission powered by Phoenix LiveView</p>
+                </div>
+
+                <form id="contact-form" phx-change="validate_contact" phx-submit="send_contact" class="space-y-4">
+                  <div class="grid sm:grid-cols-2 gap-4">
+                    <!-- Name -->
+                    <div class="space-y-1.5">
+                      <label class="text-xs font-medium text-base-content/80">Full Name *</label>
+                      <input
+                        type="text"
+                        name="contact[name]"
+                        value={@contact_form["name"]}
+                        placeholder="Your Name or Organization"
+                        class={"w-full px-4 py-3 rounded-xl bg-base-100 border text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all " <>
+                          if Map.get(@contact_errors, :name), do: "border-error text-error", else: "border-base-content/15"}
+                      />
+                      <%= if Map.get(@contact_errors, :name) do %>
+                        <p class="text-xs text-error">{Map.get(@contact_errors, :name)}</p>
+                      <% end %>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="space-y-1.5">
+                      <label class="text-xs font-medium text-base-content/80">Email Address *</label>
+                      <input
+                        type="email"
+                        name="contact[email]"
+                        value={@contact_form["email"]}
+                        placeholder="name@company.com"
+                        class={"w-full px-4 py-3 rounded-xl bg-base-100 border text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all " <>
+                          if Map.get(@contact_errors, :email), do: "border-error text-error", else: "border-base-content/15"}
+                      />
+                      <%= if Map.get(@contact_errors, :email) do %>
+                        <p class="text-xs text-error">{Map.get(@contact_errors, :email)}</p>
+                      <% end %>
+                    </div>
+                  </div>
+
+                  <!-- Subject -->
+                  <div class="space-y-1.5">
+                    <label class="text-xs font-medium text-base-content/80">Subject / Topic</label>
+                    <input
+                      type="text"
+                      name="contact[subject]"
+                      value={@contact_form["subject"]}
+                      placeholder="e.g. Senior Software Developer Role / FinTech Project Consulting"
+                      class="w-full px-4 py-3 rounded-xl bg-base-100 border border-base-content/15 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all"
+                    />
+                  </div>
+
+                  <!-- Message -->
+                  <div class="space-y-1.5">
+                    <label class="text-xs font-medium text-base-content/80">Message *</label>
+                    <textarea
+                      rows="4"
+                      name="contact[message]"
+                      placeholder="Describe your project, team requirements, or role details..."
+                      class={"w-full px-4 py-3 rounded-xl bg-base-100 border text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all resize-none " <>
+                        if Map.get(@contact_errors, :message), do: "border-error text-error", else: "border-base-content/15"}
+                    >{@contact_form["message"]}</textarea>
+                    <%= if Map.get(@contact_errors, :message) do %>
+                      <p class="text-xs text-error">{Map.get(@contact_errors, :message)}</p>
+                    <% end %>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <button
+                    type="submit"
+                    class="w-full py-3.5 px-6 rounded-xl font-semibold text-sm bg-primary text-primary-content shadow-lg shadow-primary/25 hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    <.icon name="hero-paper-airplane" class="size-4" />
+                    <span>Send Message to Rimwell</span>
+                  </button>
+                </form>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Project Architecture Modal -->
+  <%= if @selected_project do %>
+    <div
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm animate-fade-in"
+      phx-click="close_project"
+    >
+      <div
+        class="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl bg-base-100 border border-base-content/15 shadow-2xl p-6 sm:p-8 space-y-6"
+        phx-click-away="close_project"
+        onclick="event.stopPropagation()"
+      >
+        <!-- Modal Top Bar -->
+        <div class="flex items-start justify-between gap-4 border-b border-base-content/10 pb-4">
+          <div>
+            <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-2">
+              {@selected_project.badge} · {@selected_project.client}
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-base-content">
+              {@selected_project.title}
+            </h3>
+            <p class="text-sm font-semibold text-secondary mt-1">
+              {@selected_project.headline}
+            </p>
+          </div>
+
+          <button
+            phx-click="close_project"
+            class="size-9 rounded-full bg-base-200 hover:bg-base-300 flex items-center justify-center text-base-content/70 hover:text-base-content transition-all cursor-pointer shrink-0"
+          >
+            <.icon name="hero-x-mark" class="size-5" />
+          </button>
+        </div>
+
+        <!-- Metrics Ribbons -->
+        <div class="grid grid-cols-3 gap-3">
+          <%= for metric <- @selected_project.metrics do %>
+            <div class="p-3 rounded-2xl bg-base-200/50 border border-base-content/5 text-center">
+              <div class="text-base sm:text-lg font-bold text-primary">{metric.value}</div>
+              <div class="text-[11px] font-mono text-base-content/60 uppercase">{metric.label}</div>
+            </div>
+          <% end %>
+        </div>
+
+        <!-- Architecture Breakdown -->
+        <div class="space-y-4 text-sm sm:text-base leading-relaxed">
+          <div class="p-4 rounded-2xl bg-rose-500/5 border border-rose-500/15 space-y-1">
+            <div class="text-xs font-mono font-bold uppercase text-rose-500 flex items-center gap-1.5">
+              <.icon name="hero-exclamation-triangle" class="size-4" />
+              <span>The Engineering Challenge</span>
+            </div>
+            <p class="text-xs sm:text-sm text-base-content/80">
+              {@selected_project.challenge}
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-primary/5 border border-primary/15 space-y-1">
+            <div class="text-xs font-mono font-bold uppercase text-primary flex items-center gap-1.5">
+              <.icon name="hero-cog-6-tooth" class="size-4" />
+              <span>Architectural Solution &amp; Implementation</span>
+            </div>
+            <p class="text-xs sm:text-sm text-base-content/80">
+              {@selected_project.solution}
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-500/5 border border-emerald-500/15 space-y-1">
+            <div class="text-xs font-mono font-bold uppercase text-emerald-500 flex items-center gap-1.5">
+              <.icon name="hero-chart-bar" class="size-4" />
+              <span>Measurable Business Impact</span>
+            </div>
+            <p class="text-xs sm:text-sm text-base-content/80">
+              {@selected_project.impact}
+            </p>
+          </div>
+        </div>
+
+        <!-- Tech Stack Badges in Modal -->
+        <div class="space-y-2 pt-2 border-t border-base-content/10">
+          <div class="text-xs font-mono uppercase text-base-content/60 font-bold">Technology Stack &amp; Infrastructure:</div>
+          <div class="flex flex-wrap gap-2">
+            <%= for tech <- @selected_project.tech_stack do %>
+              <span class="px-3 py-1 rounded-lg text-xs font-mono font-semibold bg-base-200 text-base-content border border-base-content/10">
+                {tech}
+              </span>
+            <% end %>
+          </div>
+        </div>
+
+        <!-- Modal Actions -->
+        <div class="flex items-center justify-end gap-3 pt-4 border-t border-base-content/10">
+          <button
+            phx-click="close_project"
+            class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-primary text-primary-content hover:brightness-110 transition-all cursor-pointer"
+          >
+            Close Details
+          </button>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-base-content/10 bg-base-200/50 text-xs text-base-content/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-base-content">Rimwell Jethro Mushilingwa</span>
+        <span>·</span>
+        <span>Software Developer</span>
+        <span>·</span>
+        <span>Lusaka, Zambia</span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/Jethro-Mush" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/jethro-mushilingwa-b0863023b/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">LinkedIn</a>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-primary transition-colors cursor-pointer">Back to Top &uarr;</button>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left mt-4 text-[11px] text-base-content/40">
+      Built with Elixir 1.20, Phoenix LiveView 1.2, Tailwind CSS, &amp; the BEAM runtime.
+    </div>
+  </footer>
+</div>
