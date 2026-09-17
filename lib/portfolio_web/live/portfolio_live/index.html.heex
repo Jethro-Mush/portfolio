@@ -795,12 +795,22 @@
                 </div>
               </div>
               <button
+                type="button"
+                onclick="window.copyToClipboard('Mushilingwaj@Gmail.Com')"
                 phx-click="copy_text"
                 phx-value-field="email"
                 phx-value-value="Mushilingwaj@Gmail.Com"
-                class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border border-base-content/15 hover:border-primary hover:text-primary transition-all cursor-pointer"
+                class={"px-3 py-1.5 rounded-lg text-xs font-mono font-medium border transition-all cursor-pointer flex items-center gap-1.5 " <>
+                  if @copied_field == "email", do: "border-emerald-500 bg-emerald-500/10 text-emerald-500 font-bold", else: "border-base-content/15 hover:border-primary hover:text-primary"}
+                title="Copy email address to clipboard"
               >
-                <%= if @copied_field == "email", do: "Copied!", else: "Copy" %>
+                <%= if @copied_field == "email" do %>
+                  <.icon name="hero-check" class="size-3.5 text-emerald-500" />
+                  <span>Copied!</span>
+                <% else %>
+                  <.icon name="hero-clipboard-document" class="size-3.5" />
+                  <span>Copy</span>
+                <% end %>
               </button>
             </div>
 
@@ -818,26 +828,56 @@
                 </div>
               </div>
               <button
+                type="button"
+                onclick="window.copyToClipboard('+260978435737')"
                 phx-click="copy_text"
                 phx-value-field="phone"
                 phx-value-value="+260978435737"
-                class="px-3 py-1.5 rounded-lg text-xs font-mono font-medium border border-base-content/15 hover:border-primary hover:text-primary transition-all cursor-pointer"
+                class={"px-3 py-1.5 rounded-lg text-xs font-mono font-medium border transition-all cursor-pointer flex items-center gap-1.5 " <>
+                  if @copied_field == "phone", do: "border-emerald-500 bg-emerald-500/10 text-emerald-500 font-bold", else: "border-base-content/15 hover:border-secondary hover:text-secondary"}
+                title="Copy phone number to clipboard"
               >
-                <%= if @copied_field == "phone", do: "Copied!", else: "Copy" %>
+                <%= if @copied_field == "phone" do %>
+                  <.icon name="hero-check" class="size-3.5 text-emerald-500" />
+                  <span>Copied!</span>
+                <% else %>
+                  <.icon name="hero-clipboard-document" class="size-3.5" />
+                  <span>Copy</span>
+                <% end %>
               </button>
             </div>
 
             <!-- Location -->
-            <div class="p-4 rounded-2xl bg-base-200/50 border border-base-content/10 flex items-center gap-3">
-              <div class="size-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
-                <.icon name="hero-map-pin" class="size-5" />
-              </div>
-              <div>
-                <div class="text-[11px] font-mono text-base-content/50 uppercase">Location</div>
-                <div class="font-semibold text-sm text-base-content">
-                  Barlastone Park, Lusaka, Zambia
+            <div class="p-4 rounded-2xl bg-base-200/50 border border-base-content/10 flex items-center justify-between gap-3 hover:border-primary/40 transition-all">
+              <div class="flex items-center gap-3">
+                <div class="size-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+                  <.icon name="hero-map-pin" class="size-5" />
+                </div>
+                <div>
+                  <div class="text-[11px] font-mono text-base-content/50 uppercase">Location</div>
+                  <div class="font-semibold text-sm text-base-content">
+                    Barlastone Park, Lusaka, Zambia
+                  </div>
                 </div>
               </div>
+              <button
+                type="button"
+                onclick="window.copyToClipboard('Barlastone Park, Lusaka, Zambia')"
+                phx-click="copy_text"
+                phx-value-field="location"
+                phx-value-value="Barlastone Park, Lusaka, Zambia"
+                class={"px-3 py-1.5 rounded-lg text-xs font-mono font-medium border transition-all cursor-pointer flex items-center gap-1.5 " <>
+                  if @copied_field == "location", do: "border-emerald-500 bg-emerald-500/10 text-emerald-500 font-bold", else: "border-base-content/15 hover:border-emerald-500 hover:text-emerald-500"}
+                title="Copy address to clipboard"
+              >
+                <%= if @copied_field == "location" do %>
+                  <.icon name="hero-check" class="size-3.5 text-emerald-500" />
+                  <span>Copied!</span>
+                <% else %>
+                  <.icon name="hero-clipboard-document" class="size-3.5" />
+                  <span>Copy</span>
+                <% end %>
+              </button>
             </div>
           </div>
 
