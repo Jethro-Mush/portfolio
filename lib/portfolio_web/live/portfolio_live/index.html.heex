@@ -1,4 +1,6 @@
 <div class="min-h-screen bg-base-100 text-base-content antialiased selection:bg-primary/20 selection:text-primary">
+  <Layouts.flash_group flash={@flash} />
+
   <!-- Sticky Glassmorphic Navbar -->
   <header class="sticky top-0 z-40 w-full border-b border-base-content/10 bg-base-100/80 backdrop-blur-md transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -796,7 +798,7 @@
               </div>
               <button
                 type="button"
-                onclick="window.copyToClipboard('Mushilingwaj@Gmail.Com')"
+                onclick="window.copyToClipboard('Mushilingwaj@Gmail.Com', 'Email address')"
                 phx-click="copy_text"
                 phx-value-field="email"
                 phx-value-value="Mushilingwaj@Gmail.Com"
@@ -829,7 +831,7 @@
               </div>
               <button
                 type="button"
-                onclick="window.copyToClipboard('+260978435737')"
+                onclick="window.copyToClipboard('+260978435737', 'Phone number')"
                 phx-click="copy_text"
                 phx-value-field="phone"
                 phx-value-value="+260978435737"
@@ -862,7 +864,7 @@
               </div>
               <button
                 type="button"
-                onclick="window.copyToClipboard('Barlastone Park, Lusaka, Zambia')"
+                onclick="window.copyToClipboard('Barlastone Park, Lusaka, Zambia', 'Location')"
                 phx-click="copy_text"
                 phx-value-field="location"
                 phx-value-value="Barlastone Park, Lusaka, Zambia"

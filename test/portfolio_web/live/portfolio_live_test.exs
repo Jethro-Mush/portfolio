@@ -94,4 +94,22 @@ defmodule PortfolioWeb.PortfolioLiveTest do
     refute render(view) =~ "Message Sent Successfully!"
     assert render(view) =~ "Send a Direct Message"
   end
+
+  test "copying contact information updates state, displays flash notification, and clears after timeout", %{conn: conn} do
+    {:ok, view, _html} = live(conn, ~p"/")
+
+    # Click copy email
+    render_click(view, "copy_text", %{"field" => "email", "value" => "Mushilingwaj@Gmail.Com"})
+    html = render(view)
+
+    # Flash notification and button state rendered
+    assert html =~ "Copied Email address to clipboard"
+    assert html =~ "Mushilingwaj@Gmail.Com"
+    assert html =~ "Copied!"
+
+    # Test :clear_copied lifecycle
+    send(view.pid, :clear_copied)
+    html_after = render(view)
+    refute html_after =~ "Copied!"
+  end
 end

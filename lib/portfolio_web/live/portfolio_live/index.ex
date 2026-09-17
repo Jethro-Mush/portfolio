@@ -64,9 +64,21 @@ defmodule PortfolioWeb.PortfolioLive.Index do
   end
 
   @impl true
-  def handle_event("copy_text", %{"field" => field, "value" => _value}, socket) do
+  def handle_event("copy_text", %{"field" => field, "value" => value}, socket) do
+    label =
+      case field do
+        "email" -> "Email address"
+        "phone" -> "Phone number"
+        "location" -> "Address"
+        _ -> "Information"
+      end
+
     Process.send_after(self(), :clear_copied, 2500)
-    {:noreply, assign(socket, :copied_field, field)}
+
+    {:noreply,
+     socket
+     |> assign(:copied_field, field)
+     |> put_flash(:info, "Copied #{label} to clipboard: #{value}")}
   end
 
   @impl true
@@ -97,7 +109,10 @@ defmodule PortfolioWeb.PortfolioLive.Index do
 
   @impl true
   def handle_info(:clear_copied, socket) do
-    {:noreply, assign(socket, :copied_field, nil)}
+    {:noreply,
+     socket
+     |> assign(:copied_field, nil)
+     |> clear_flash(:info)}
   end
 
   defp validate_contact_params(params) do

@@ -46,16 +46,22 @@ liveSocket.connect()
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
 
-// Universal Clipboard copy utility
-window.copyToClipboard = function(text) {
+// Universal Clipboard copy utility with instant floating toast notification
+window.copyToClipboard = function(text, label = "Text") {
+  const onSuccess = () => {
+    window.showToast(`Copied ${label} to clipboard!`)
+  }
+
   if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(text).catch(() => copyFallback(text))
+    navigator.clipboard.writeText(text)
+      .then(onSuccess)
+      .catch(() => copyFallback(text, onSuccess))
   } else {
-    copyFallback(text)
+    copyFallback(text, onSuccess)
   }
 }
 
-function copyFallback(text) {
+function copyFallback(text, onSuccess) {
   const textArea = document.createElement("textarea")
   textArea.value = text
   textArea.style.position = "fixed"
@@ -65,11 +71,49 @@ function copyFallback(text) {
   textArea.focus()
   textArea.select()
   try {
-    document.execCommand("copy")
+    const successful = document.execCommand("copy")
+    if (successful && onSuccess) onSuccess()
   } catch (err) {
     console.error("Fallback copy failed", err)
   }
   textArea.remove()
+}
+
+// Global Floating Toast Notification
+window.showToast = function(message) {
+  let toastContainer = document.getElementById("toast-notification-container")
+  if (!toastContainer) {
+    toastContainer = document.createElement("div")
+    toastContainer.id = "toast-notification-container"
+    toastContainer.className = "fixed bottom-6 right-6 flex flex-col gap-2 pointer-events-none"
+    toastContainer.style.zIndex = "99999"
+    document.body.appendChild(toastContainer)
+  }
+
+  const toast = document.createElement("div")
+  toast.className = "pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-2xl bg-base-300 text-base-content shadow-2xl border border-emerald-500/50 backdrop-blur-xl text-xs sm:text-sm font-semibold transform transition-all duration-300 translate-y-4 opacity-0"
+  toast.style.boxShadow = "0 10px 30px -5px rgba(0, 0, 0, 0.4), 0 0 15px rgba(16, 185, 129, 0.2)"
+  toast.innerHTML = `
+    <span class="flex size-7 rounded-full bg-emerald-500/20 text-emerald-400 items-center justify-center shrink-0">
+      <svg class="size-4" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+      </svg>
+    </span>
+    <span class="pr-2 font-mono text-xs sm:text-sm">${message}</span>
+  `
+
+  toastContainer.appendChild(toast)
+
+  requestAnimationFrame(() => {
+    toast.classList.remove("translate-y-4", "opacity-0")
+    toast.classList.add("translate-y-0", "opacity-100")
+  })
+
+  setTimeout(() => {
+    toast.classList.remove("translate-y-0", "opacity-100")
+    toast.classList.add("translate-y-4", "opacity-0")
+    setTimeout(() => toast.remove(), 350)
+  }, 3500)
 }
 
 // The lines below enable quality of life phoenix_live_reload
